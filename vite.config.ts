@@ -1,9 +1,7 @@
 import { defineConfig } from 'vite'
-
-export default defineConfig({
-  base: '/PortfolioDunny/',
-  // ... mantenha o restante do código que já estava aqui abaixo
-})
+import path from 'path'
+import tailwindcss from '@tailwindcss/vite'
+import react from '@vitejs/plugin-react'
 
 
 function figmaAssetResolver() {
