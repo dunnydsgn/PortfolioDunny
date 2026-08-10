@@ -378,11 +378,16 @@ function ProjectCard({ project }: { project: Project }) {
           </motion.div>
         </div>
 
-        {/* ── Image column — centred, padded away from text and card edges ── */}
-        <div className="flex items-center justify-center w-full md:flex-1 px-6 pb-8 md:pb-0 md:pl-8 lg:pl-10 md:pr-8 lg:pr-12 md:py-[46px]">
+        {/* ── Image column ──
+             self-stretch → takes the full card height.
+             flex-col items-center → centers image horizontally.
+             py padding creates equal breathing room top + bottom,
+             so flex-1 on the wrapper fills exactly that remaining
+             height — perfectly centred by geometry on every card. */}
+        <div className="self-stretch flex flex-col items-center w-full md:flex-1 px-6 pb-8 md:px-8 lg:px-12 md:py-[46px]">
           <motion.div
             variants={fadeIn}
-            className="relative w-full max-w-[630px] h-[240px] md:h-[441px] rounded-[30px] overflow-hidden"
+            className="relative w-full max-w-[630px] rounded-[30px] overflow-hidden h-[240px] md:flex-1"
           >
             <ImageWithFallback
               src={project.image}
