@@ -524,7 +524,7 @@ const projects: Project[] = [
   {
     category: "IDENTIDADE VISUAL",
     title: "BRECHÓ PEACHY",
-    tags: ["Design Gráfico", "Apresentação", "Powerpoint"],
+    tags: ["Design Gráfico", "Identidade Visual", "Design Digital"],
     description:
       "Projeto de identidade visual desenvolvido para posicionar a marca no universo da moda consciente.",
     image: imgBrechoPeachy,
