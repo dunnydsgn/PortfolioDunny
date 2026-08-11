@@ -291,7 +291,7 @@ function FilterTabs({
             <button
               key={tab.id}
               onClick={() => onChange(tab.id)}
-              className="relative flex items-center justify-center h-[54px] md:h-[56px] px-6 md:px-8 rounded-[48px] cursor-pointer transition-colors duration-300 min-w-[100px] md:min-w-[150px]"
+              className="relative flex items-center justify-center h-[40px] md:h-[44px] px-4 md:px-6 rounded-[48px] cursor-pointer transition-colors duration-300 min-w-[76px] md:min-w-[110px]"
               aria-pressed={isActive}
             >
               {/* Active highlight pill — fades in/out smoothly */}
@@ -303,7 +303,7 @@ function FilterTabs({
                   opacity: isActive ? 1 : 0,
                 }}
               />
-              <span className={`relative z-10 text-lg md:text-2xl font-normal transition-colors duration-300 ${
+              <span className={`relative z-10 text-sm md:text-base font-normal transition-colors duration-300 ${
                 isActive ? "text-[#270f2e]" : "text-white"
               }`}>
                 {tab.label}
@@ -326,10 +326,10 @@ function ProjectCard({ project }: { project: Project }) {
     >
       <CardGlow />
 
-      <div className="relative z-10 flex flex-col md:flex-row min-h-[360px] md:min-h-[533px]">
+      <div className="relative z-10 flex flex-col md:flex-row md:h-[500px]">
 
         {/* Text column */}
-        <div className="flex flex-col justify-center gap-10 md:gap-[60px] px-7 py-10 md:pl-[55px] lg:pl-[75px] md:pr-0 md:py-[58px] w-full md:w-[44%] lg:w-[40%] shrink-0">
+        <div className="flex flex-col justify-center gap-10 md:gap-[60px] px-7 py-10 md:pl-[55px] lg:pl-[75px] md:pr-0 md:py-[50px] w-full md:w-[52%] lg:w-[50%] shrink-0">
           <motion.div variants={staggerContainer} className="flex flex-col gap-4 md:gap-[21px]">
             <motion.p variants={fadeIn}
               className="text-[#e9deff] text-[13px] uppercase tracking-wide font-normal">
@@ -358,7 +358,7 @@ function ProjectCard({ project }: { project: Project }) {
         </div>
 
         {/* Image column — self-stretch so flex-1 fills height between padding */}
-        <div className="self-stretch flex flex-col items-center w-full md:flex-1 px-6 pb-8 md:px-8 lg:px-12 md:py-[46px]">
+        <div className="self-stretch flex flex-col items-center w-full md:flex-1 px-6 pb-8 md:px-6 lg:px-8 md:py-[36px]">
           <motion.div variants={fadeIn}
             className="relative w-full max-w-[630px] rounded-[30px] overflow-hidden h-[240px] md:flex-1">
             <ImageWithFallback src={project.image} alt={project.title}
